@@ -1,0 +1,54 @@
+</html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="calculator.css">
+
+</head>
+<script>
+  function print(val){
+document.getElementById("one").value=document.getElementById("one").value+val;
+
+  }    
+  function solve() {
+   var x= document.getElementById("one").value;
+   var y=eval(x);
+   document.getElementById("one").value=y;
+  } 
+  function empty(){
+    document.getElementById("one").value="";
+  }
+
+</script> 
+<body>
+  <input type="button" value="C" class="button" onclick="empty()">
+        
+    <input type="text" id="one">
+    <div class="row">
+     
+        <input type="button" value="7" class="button" onclick="print('7')">
+        <input type="button" value="8" class="button"  onclick="print('8')">
+        <input type="button" value="9" class="button" onclick="print('9')">
+        <input type="button" value="*" class="button" onclick="print('*')">
+
+          </div>
+          <div class="row">
+            <input type="button" value="6" class="button" onclick="print('6')">
+            <input type="button" value="5" class="button"  onclick="print('5')">
+            <input type="button" value="4" class="button"  onclick="print('4')">
+        <input type="button" value="-" class="button" onclick="print('-')">
+          </div>
+        <div class="row">
+            <input type="button" value="3" class="button"  onclick="print('3')">
+            <input type="button" value="2" class="button"  onclick="print('2')">
+            <input type="button" value="1" class="button"  onclick="print('1')">
+        <input type="button" value="+" class="button"  onclick="print('+')">
+        </div>
+        <div class="row">
+          <input type="button" value="." class="button"  onclick="print('.')">
+          <input type="button" value="0" class="button"  onclick="print('0')">
+          <input type="button" value="/" class="button"  onclick="print('/')">
+      <input type="button" value="=" class="button"  onclick="solve()">
+
+              </div>
+</body>
+</html>
